@@ -36,7 +36,6 @@ export class MoviesController {
   create(@Body() movieData: CreateMovieDto) {
     const movie = {
       ...movieData,
-      id: 0,
       genres: movieData.genres ?? [],
     };
     return this.moviesService.create(movie);
